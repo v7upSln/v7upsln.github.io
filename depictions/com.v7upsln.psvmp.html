@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PS Vita Media Processor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background: #f5f5f5;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #007acc;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #007acc;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 6px;
+            transition: 0.25s;
+        }
+
+        .button:hover {
+            background: #005fa3;
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 26px;
+            font-weight: 600;
+            border-left: 5px solid #007acc;
+            padding-left: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .feature {
+            background: #f8f9fb;
+            padding: 18px;
+            margin: 14px 0;
+            border-radius: 12px;
+            border-left: 4px solid #007acc;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        code {
+            background: #1e1e1e;
+            color: #e8e8e8;
+            padding: 14px;
+            display: block;
+            border-radius: 10px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            font-size: 14px;
+            overflow-x: auto;
+            line-height: 1.55;
+        }
+
+        ul {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #007acc;
+            color: #333;
+        }
+
+        .footer p {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="header">
+            <h1>PS Vita Media Processor</h1>
+            <p>Version 3.0.4 • By v7upSln</p>
+            <a href="https://github.com/v7upSln" class="button">GitHub</a>
+            <a href="mailto:salmanalmtyry522@gmail.com" class="button">Contact</a>
+        </div>
+
+        <h2>Description</h2>
+        <p>A command-line utility designed to download videos and music from multiple platforms and transfer them to your PS Vita using an optimized FTP workflow.</p>
+
+        <h2>Features</h2>
+
+        <div class="feature">
+            <strong>Multi-source support</strong><br>
+            Download media from YouTube, SoundCloud, MEGA, and additional providers.
+        </div>
+
+        <div class="feature">
+            <strong>Automatic conversion</strong><br>
+            Converts media to PS Vita-compatible formats automatically.
+        </div>
+
+        <div class="feature">
+            <strong>FTP transfer</strong><br>
+            Sends files directly to your PS Vita via FTP.
+        </div>
+
+        <div class="feature">
+            <strong>Command-line interface</strong><br>
+            Ideal for use in NewTerm and other terminal applications.
+        </div>
+
+        <h2>Usage Examples</h2>
+        <code># Download and transfer a video
+psvmp "https://youtube.com/watch?v=example" --type video
+
+# Download and transfer music
+psvmp "https://soundcloud.com/artist/track" --type music
+
+# Show configuration
+psvmp --config-show
+
+# View download history
+psvmp --history</code>
+
+        <h2>Dependencies</h2>
+        <ul>
+            <li>python3</li>
+            <li>ffmpeg</li>
+            <li>yt-dlp</li>
+        </ul>
+
+        <h2>Configuration</h2>
+        <p>Set your PS Vita IP address and FTP port:</p>
+
+        <code>psvmp --config-set vita_ip=192.168.1.15
+psvmp --config-set vita_port=1337</code>
+
+        <div class="footer">
+            <p><strong>v7upSln Repository</strong></p>
+            <p>Enjoy your PS Vita media workflow.</p>
+        </div>
+
+    </div>
+</body>
+</html>

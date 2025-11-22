@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v7upSln Repository</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #e6eef5, #f8fafc);
+            color: #1a1a1a;
+        }
+
+        /* Container */
+        .wrapper {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero / Header */
+        .hero {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            margin: 6px 0;
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* Installer buttons */
+        .installers {
+            margin-top: 25px;
+        }
+
+        .installers a {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 20px;
+            color: white;
+            background: #0077c7;
+            border-radius: 10px;
+            font-size: 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.25s ease;
+        }
+
+        .installers a:hover {
+            background: #005c9c;
+            transform: translateY(-2px);
+        }
+
+        /* Section Title */
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        /* Package cards */
+        .package {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 25px;
+            border-radius: 14px;
+            margin: 18px 0;
+            border-left: 5px solid #007acc;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+
+        .package h3 {
+            margin-top: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .badge {
+            background: #007acc;
+            color: white;
+            padding: 4px 9px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 6px;
+        }
+
+        .package a {
+            color: #007acc;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .package a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 45px;
+            padding-top: 25px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .footer a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Hero -->
+        <div class="hero">
+            <h1>v7upSln Repository</h1>
+            <p>iOS tweaks, utilities, tools and enhancements</p>
+
+            <div class="installers">
+                <a href="sileo://source/https://v7upsln.github.io/">Add to Sileo</a>
+                <a href="zbra://sources/add/https://v7upsln.github.io/">Add to Zebra</a>
+                <a href="installer://add/https://v7upsln.github.io/">Add to Installer 5</a>
+            </div>
+        </div>
+
+        <!-- Packages -->
+        <h2>Available Packages</h2>
+
+        <div class="package">
+            <h3>PS Vita Media Processor <span class="badge">v3.0.4</span></h3>
+            <p>Download and transfer media to your PS Vita using an optimized FTP workflow.</p>
+
+            <p><strong>Package ID:</strong> com.v7upsln.psvmp</p>
+            <p><strong>Dependencies:</strong> python3, ffmpeg, yt-dlp</p>
+
+            <a href="./depictions/com.v7upsln.psvmp.html">View Details</a>
+        </div>
+
+        <div class="package">
+            <h3>More packages coming soon</h3>
+            <p>Additional tools, tweaks, utilities and enhancements will be added soon.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>GitHub: <a href="https://github.com/v7upSln">https://github.com/v7upSln</a></p>
+            <p>Contact: salmanalmtyry522@gmail.com</p>
+        </div>
+
+    </div>
+</body>
+</html>
