@@ -1,24 +1,8 @@
-Origin: v7upSln Repo
-Label: v7upSln Repo
+Label: v7upsln repo
+Origin: v7upsln repo
 Suite: stable
 Version: 1.0
-Codename: ios
-Architectures: iphoneos-arm
+Codename: v7upsln-repo
+Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: v7upSln repo.
-Icon: https://v7upsln.github.io/CydiaIcon.JPG
-
-MD5Sum:
- 6b6429af7601516e0ba9b34471add037 525 Packages
- d9c4bdbb9e40906f0f9208c892147426 386 Packages.gz
- ff0f3ac10bc48a959a85a7ee26f843b6 420 Packages.bz2
-
-SHA1:
- 3992bc43151fcb5d9d1f7295c8575d86dfc6f54f 525 Packages
- 1b7ff7f38d2650b173b698a23877c8746e1888eb 386 Packages.gz
- 62d8e8650e4c10bd5bdcab37052e28fc92d9bda4 420 Packages.bz2
-
-SHA256:
- 65b3344659186bafcccf82d8f957259fe28de8cf9993bafba15a25eb490bfb56 525 Packages
- dea6bb5849b7a2c8903f1b4be67aa57a84b98dcf7427610f1aced3d27a07e7a5 386 Packages.gz
- 91d278e8a529fb0621e966313f412fc754783395d484191aca95fd2b04280f8f 420 Packages.bz2
+Description: v7upsln repo.
