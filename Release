@@ -1,0 +1,9 @@
+Label: v7upSln Repo
+Origin: v7upSln Repo
+Suite: stable
+Version: 1.0
+Codename: v7upSln-Repo
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: v7upSln repo.
+Icon: file://CydiaIcon.png
