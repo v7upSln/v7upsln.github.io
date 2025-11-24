@@ -191,6 +191,7 @@
             display: flex;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -224,6 +225,78 @@
         .btn-secondary:hover {
             border-color: #ffffff;
             color: #ffffff;
+        }
+
+        /* GitHub Star Button */
+        .github-star-btn {
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            background: black;
+            color: white;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            height: 36px;
+            padding: 0 16px;
+            max-width: 208px;
+            white-space: pre;
+            position: relative;
+            justify-content: center;
+            margin-left: auto;
+            gap: 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease-out;
+            border: none;
+            cursor: pointer;
+        }
+
+        .github-star-btn:hover {
+            background: black;
+            box-shadow: 0 0 0 2px black, 0 0 0 4px white;
+        }
+
+        .github-star-btn .shine-effect {
+            position: absolute;
+            right: 0;
+            margin-top: -48px;
+            height: 128px;
+            width: 32px;
+            transform: translateX(48px) rotate(12deg);
+            background: white;
+            opacity: 0.1;
+            transition: all 1s ease-out;
+        }
+
+        .github-star-btn:hover .shine-effect {
+            transform: translateX(-160px) rotate(12deg);
+        }
+
+        .github-star-btn .github-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .github-star-btn .star-icon {
+            width: 16px;
+            height: 16px;
+            color: #6b7280;
+            transition: all 0.3s;
+            fill: currentColor;
+        }
+
+        .github-star-btn:hover .star-icon {
+            color: #fcd34d;
+        }
+
+        .github-star-btn .star-count {
+            display: inline-block;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.025em;
+            font-weight: 500;
+            color: white;
         }
 
         /* Footer */
@@ -304,8 +377,10 @@
                 flex-direction: column;
             }
 
-            .btn {
+            .btn, .github-star-btn {
                 justify-content: center;
+                width: 100%;
+                max-width: 100%;
             }
         }
     </style>
@@ -364,15 +439,15 @@
                 </div>
 
                 <div class="package-actions">
-                    <a href="depictions/com.v7upsln.psvmp.html" class="btn btn-primary">
+                    <a href="depictions/PSVMP/com.v7upsln.psvmp.html" class="btn btn-primary">
                         <i class="fas fa-info-circle"></i>
                         View Details
                     </a>
-                    <a href="https://github.com/v7upSln" class="btn btn-secondary">
+                    <a href="https://github.com/v7upSln/PSVMP" class="btn btn-secondary">
                         <i class="fab fa-github"></i>
                         Source Code
                     </a>
-                                        <a href="https://github.com/v7upSln/PSVMP" class="github-star-btn" target="_blank" rel="noopener">
+                    <a href="https://github.com/v7upSln/PSVMP" class="github-star-btn" target="_blank" rel="noopener">
                         <span class="shine-effect"></span>
                         <div style="display: flex; align-items: center;">
                             <svg class="github-icon" viewBox="0 0 438.549 438.549">
@@ -450,5 +525,30 @@
             </p>
         </div>
     </footer>
+<script>
+    async function updateStarCount() {
+        const username = "v7upSln";
+        const repo = "PSVMP";
+
+        let url;
+
+        if (repo === "") {
+            url = `https://api.github.com/users/${username}/repos`;
+            const res = await fetch(url);
+            const data = await res.json();
+
+            const totalStars = data.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+            document.querySelector(".star-count").textContent = totalStars;
+        } else {
+            url = `https://api.github.com/repos/${username}/${repo}`;
+            const res = await fetch(url);
+            const data = await res.json();
+
+            document.querySelector(".star-count").textContent = data.stargazers_count || 0;
+        }
+    }
+
+    updateStarCount();
+</script>
 </body>
 </html>
