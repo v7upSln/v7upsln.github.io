@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>PS Vita Media Processor - v7upSln Repository</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -21,6 +21,8 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
@@ -28,6 +30,7 @@
             margin: 0 auto;
             padding: 0 30px;
             flex: 1;
+            width: 100%;
         }
 
         /* Header */
@@ -46,6 +49,7 @@
             font-size: 14px;
             margin-bottom: 20px;
             transition: color 0.3s ease;
+            padding: 8px 0;
         }
 
         .back-link:hover {
@@ -62,6 +66,7 @@
 
         .package-info {
             flex: 1;
+            min-width: 0;
         }
 
         h1 {
@@ -69,6 +74,7 @@
             font-weight: 700;
             margin-bottom: 8px;
             letter-spacing: -1px;
+            word-wrap: break-word;
         }
 
         .version {
@@ -81,6 +87,7 @@
             color: #666;
             font-size: 14px;
             font-family: 'Monaco', 'Courier New', monospace;
+            word-break: break-all;
         }
 
         .status-badge {
@@ -94,12 +101,16 @@
             color: #22c55e;
             border: 1px solid #22c55e;
             white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .contact-links {
             display: flex;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .contact-btn {
@@ -115,6 +126,8 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
+            min-height: 44px;
+            justify-content: center;
         }
 
         .contact-btn:hover {
@@ -172,6 +185,7 @@
         .feature-item span {
             color: #999;
             font-size: 14px;
+            line-height: 1.5;
         }
 
         /* Dependencies */
@@ -199,6 +213,7 @@
             padding: 20px;
             margin: 15px 0;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .code-block pre {
@@ -207,6 +222,7 @@
             line-height: 1.6;
             color: #e8e8e8;
             margin: 0;
+            white-space: pre;
         }
 
         .code-comment {
@@ -219,6 +235,8 @@
             padding: 20px;
             border-radius: 10px;
             margin-top: 15px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .config-example pre {
@@ -226,6 +244,7 @@
             font-size: 14px;
             line-height: 1.8;
             color: #e8e8e8;
+            white-space: pre;
         }
 
         /* List */
@@ -269,6 +288,7 @@
             gap: 20px;
             justify-content: center;
             margin-bottom: 25px;
+            flex-wrap: wrap;
         }
 
         .social-link {
@@ -309,21 +329,178 @@
             color: #ffffff;
         }
 
+        /* Tablet and Mobile Styles */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
             h1 {
                 font-size: 28px;
+                letter-spacing: -0.5px;
+            }
+
+            .header {
+                padding: 25px 0;
+                margin-bottom: 25px;
             }
 
             .package-header {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .version {
+                font-size: 15px;
+            }
+
+            .package-id {
+                font-size: 13px;
+            }
+
+            .status-badge {
+                margin-top: 15px;
             }
 
             .contact-links {
                 flex-direction: column;
+                margin-top: 15px;
+                width: 100%;
             }
 
             .contact-btn {
-                justify-content: center;
+                width: 100%;
+                padding: 12px 18px;
+                font-size: 15px;
+            }
+
+            .section {
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 12px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+                padding-bottom: 12px;
+            }
+
+            .section p {
+                font-size: 15px;
+            }
+
+            .feature-item {
+                padding: 15px;
+            }
+
+            .feature-item strong {
+                font-size: 15px;
+            }
+
+            .feature-item span {
+                font-size: 13px;
+            }
+
+            .code-block {
+                padding: 15px;
+            }
+
+            .code-block pre {
+                font-size: 12px;
+            }
+
+            .config-example {
+                padding: 15px;
+            }
+
+            .config-example pre {
+                font-size: 12px;
+            }
+
+            .dep-list {
+                gap: 8px;
+            }
+
+            .dep-item {
+                font-size: 13px;
+                padding: 8px 14px;
+            }
+
+            ul li {
+                font-size: 15px;
+                padding: 8px 0;
+                padding-left: 20px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .social-links {
+                gap: 15px;
+            }
+
+            .social-link {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+            }
+
+            footer {
+                padding: 35px 0 25px;
+                margin-top: 40px;
+            }
+
+            .footer-text {
+                font-size: 13px;
+            }
+        }
+
+        /* Small Mobile Styles */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .header {
+                padding: 20px 0;
+            }
+
+            .section {
+                padding: 18px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+
+            .code-block pre,
+            .config-example pre {
+                font-size: 11px;
+            }
+
+            .back-link {
+                font-size: 13px;
+            }
+
+            .contact-btn {
+                font-size: 14px;
+                padding: 11px 16px;
+            }
+
+            .feature-item {
+                padding: 14px;
+            }
+
+            .social-link {
+                width: 46px;
+                height: 46px;
+                font-size: 17px;
             }
         }
     </style>
