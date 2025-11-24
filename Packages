@@ -1,0 +1,15 @@
+Package: com.v7upsln.psvmp
+Version: 3.0.4
+Architecture: iphoneos-arm
+Maintainer: v7upsln <salmanalmtyry522@gmail.com>
+Depends: python3, ffmpeg, yt-dlp
+Filename: ./debs/psvmp_3.0.4_iphoneos-arm.deb
+Size: 1536348
+MD5sum: 523839335840b5829309fea9fd6869d5
+SHA1: 408bab9b7555d43bd59049aa102373f579f07932
+SHA256: b788f9f0c6add5beb01d6664d12fa25741919fdb882bfad89f7e36bf165aec5e
+Section: Utilities
+Description: Download and transfer media to your PS Vita.
+Author: v7upsln <salmanalmtyry522@gmail.com>
+Name: PS Vita Media Processor
+
