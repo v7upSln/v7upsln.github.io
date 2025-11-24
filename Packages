@@ -3,7 +3,7 @@ Version: 3.0.4
 Architecture: iphoneos-arm64
 Maintainer: v7upsln <salmanalmtyry522@gmail.com>
 Depends: python3, ffmpeg, yt-dlp
-Filename: debs/psvmp_3.0.4_iphoneos-arm64.deb
+Filename: debs/PSvitaMediaIOSileo.deb
 Size: 25538
 MD5sum: 304f823dc47dbbf5a3a21ff9045d4e1b
 SHA1: 5a8f5b8e9733aa46f4ad4bf63053ac57a5a1883e
