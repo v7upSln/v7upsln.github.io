@@ -4,285 +4,71 @@
     <meta charset="UTF-8">
     <title>v7upSln Repository</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="v7upSln Repository - iOS tweaks, utilities, and tools for jailbroken devices">
+    <meta property="og:title" content="v7upSln Repository">
+    <meta property="og:description" content="iOS tweaks, utilities, and tools for jailbroken devices">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 30px;
-            flex: 1;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 80px 0 60px;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 25px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: #999;
-            margin-bottom: 40px;
-        }
-
-        .repo-url {
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            padding: 16px 24px;
-            border-radius: 12px;
-            display: inline-block;
-            margin-bottom: 35px;
-            font-family: 'Monaco', 'Courier New', monospace;
-            font-size: 15px;
-            color: #fff;
-        }
-
-        /* Installer Buttons */
-        .installers {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            padding: 14px 28px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 2px solid transparent;
-        }
-
-        .btn i {
-            font-size: 18px;
-        }
-
-        .btn-sileo {
-            background: #20c5bf;
-            color: #0a0a0a;
-        }
-
-        .btn-sileo:hover {
-            background: #1aada8;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(32, 197, 191, 0.3);
-        }
-
-        .btn-cydia {
-            background: #ae5739;
-            color: #ffffff;
-        }
-
-        .btn-cydia:hover {
-            background: #964a30;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(174, 87, 57, 0.3);
-        }
-
-        .btn-zebra {
-            background: #e1e8ed;
-            color: #0a0a0a;
-        }
-
-        .btn-zebra:hover {
-            background: #d1d8dd;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(225, 232, 237, 0.3);
-        }
-
-        .btn-packages {
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-            margin-top: 20px;
-        }
-
-        .btn-packages:hover {
-            background: #ffffff;
-            color: #0a0a0a;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: #0a0a0a;
-            border-top: 1px solid #2a2a2a;
-            padding: 50px 0 30px;
-            margin-top: 80px;
-        }
-
-        .footer-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 30px;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 25px;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-size: 20px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background: #ffffff;
-            color: #0a0a0a;
-            border-color: #ffffff;
-            transform: translateY(-3px);
-        }
-
-        .footer-text {
-            color: #666;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        .footer-text a {
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-text a:hover {
-            color: #ffffff;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            .installers {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href='assets/style.css'>
 </head>
 
 <body>
-    <div class="container">
-        <div class="hero">
-            <div class="logo">
-                <img src="https://i.ibb.co/XkL9SRYM/145231985.png" alt="v7upSln">
-            </div>
-            <h1>v7upSln Repository</h1>
-            <p class="subtitle">iOS tweaks, utilities, tools.</p>
-            
-            <div class="repo-url">
-                https://v7upsln.github.io/
-            </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <main id="main-content">
+        <div class="container">
+            <div class="hero">
+                <div class="logo">
+                    <img src="https://i.ibb.co/XkL9SRYM/145231985.png" alt="v7upSln Repository Logo">
+                </div>
+                <h1>v7upSln Repository</h1>
+                <p class="subtitle">iOS tweaks, utilities, tools.</p>
+                
+                <div class="repo-url">
+                    https://v7upsln.github.io/
+                </div>
 
-            <div class="installers">
-                <a href="sileo://source/https://v7upsln.github.io/" class="btn btn-sileo">
-                    <i class="fas fa-download"></i>
-                    Add to Sileo
-                </a>
-                <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://v7upsln.github.io/" class="btn btn-cydia">
-                    <i class="fas fa-download"></i>
-                    Add to Cydia
-                </a>
-                <a href="zbra://sources/add/https://v7upsln.github.io/" class="btn btn-zebra">
-                    <i class="fas fa-download"></i>
-                    Add to Zebra
+                <div class="installers">
+                    <a href="sileo://source/https://v7upsln.github.io/" class="btn btn-sileo">
+                        <i class="fas fa-download"></i>
+                        Add to Sileo
+                    </a>
+                    <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://v7upsln.github.io/" class="btn btn-cydia">
+                        <i class="fas fa-download"></i>
+                        Add to Cydia
+                    </a>
+                    <a href="zbra://sources/add/https://v7upsln.github.io/" class="btn btn-zebra">
+                        <i class="fas fa-download"></i>
+                        Add to Zebra
+                    </a>
+                </div>
+
+                <a href="packages.html" class="btn btn-packages">
+                    <i class="fas fa-box"></i>
+                    Browse Available Packages
                 </a>
             </div>
-
-            <a href="packages.html" class="btn btn-packages">
-                <i class="fas fa-box"></i>
-                Browse Available Packages
-            </a>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://github.com/v7upSln" class="social-link" target="_blank" rel="noopener" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/x0wz5/" class="social-link" target="_blank" rel="noopener" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://twitter.com/_so7up" class="social-link" target="_blank" rel="noopener" title="Twitter/X">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:salmanalmtyry522@gmail.com" class="social-link" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            
-            <p class="footer-text">
-                © 2025 v7upSln Repository<br>
-                <a href="mailto:salmanalmtyry522@gmail.com">salmanalmtyry522@gmail.com</a>
-            </p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
+
+    <script>
+        // Load footer content
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                document.getElementById('footer-container').innerHTML = '<footer><p>Footer failed to load</p></footer>';
+            });
+    </script>
 </body>
 </html>
