@@ -21,10 +21,10 @@ Architecture: iphoneos-arm64
 Maintainer: v7upsln
 Depends: python3
 Filename: debs/yt-dlp-python_2023.11.14_iphoneos-arm64.deb
-Size: 1600820
-MD5sum: 8728310c1c668ddfdb69d6c24c6ccc7f
-SHA1: 40711a880466e84c545c7b1d19f84a2b36c35207
-SHA256: 4fc73645d75b975ea2c5851ae490bfc99cf35db3d91c36a34a4fb3a4d958f899
+Size: 1600880
+MD5sum: a5e3c64cd289bc7617a6c9e8c7857fbe
+SHA1: 205014c72f38a3402b204d3e3411dd63b89022e9
+SHA256: a2df846a322760712dc1b06e0715c4faecb3869eb91d4517c882a2af5f422676
 Section: Multimedia
 Description: yt-dlp 2023.11.14 (Python module + CLI) built for rootless iOS
  yt-dlp is a video/audio downloader with support for hundreds of websites.
