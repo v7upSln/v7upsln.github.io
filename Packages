@@ -2,12 +2,12 @@ Package: psvmp
 Version: 3.0.4
 Architecture: iphoneos-arm64
 Maintainer: v7upsln
-Depends: python3, ffmpeg, yt-dlpy3
+Depends: python3, ffmpeg, yt-dlp
 Filename: debs/psvmp_3.0.4_iphoneos-arm64.deb
-Size: 976984
-MD5sum: d2855ff2285ea07d0aa5bf7368afae7e
-SHA1: 58b627e084fdcd99ffabf82ec912451f37ee4c38
-SHA256: 2f9f7f2fe0b6be71ceb41813eebd1084b4eb7259504b158a5d80ed75fb055e85
+Size: 976800
+MD5sum: 478924d436fb32abf568767598defc0c
+SHA1: 07f162cfc1b61784f3095c6df2e3346705f7787a
+SHA256: 4115bf8a12ba94265279d2d39b8b9102fc1296369e8d3a9b645c5e1c90a54816
 Section: Utilities
 Description: Download and transfer media to your PS Vita.
 Author: v7upsln
