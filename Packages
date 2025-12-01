@@ -4,34 +4,14 @@ Architecture: iphoneos-arm64
 Maintainer: v7upsln
 Depends: python3, ffmpeg, yt-dlp
 Filename: debs/psvmp_3.0.4_iphoneos-arm64.deb
-Size: 976800
-MD5sum: 478924d436fb32abf568767598defc0c
-SHA1: 07f162cfc1b61784f3095c6df2e3346705f7787a
-SHA256: 4115bf8a12ba94265279d2d39b8b9102fc1296369e8d3a9b645c5e1c90a54816
+Size: 1056448
+MD5sum: 271ea68d9ee8ead283e943152babe4bf
+SHA1: f448a7784d315a224d468286f0c48bd74c3235c8
+SHA256: 46c1559eed274a702072516085137d8dba135c23bf22083029d77e506c3b6eae
 Section: Utilities
 Description: Download and transfer media to your PS Vita.
 Author: v7upsln
 Icon: https://raw.githubusercontent.com/v7upSln/v7upsln.github.io/refs/heads/main/assets/icons/com.v7upsln.psvmp.png
 Name: PS Vita Media Processor
 Sileodepiction: https://v7upsln.github.io/depictions/PSVMP/com.v7upsln.psvmp.html
-
-Package: yt-dlpy3
-Version: 2023.11.14
-Architecture: iphoneos-arm64
-Maintainer: v7upsln
-Depends: python3
-Filename: debs/yt-dlp-python_2023.11.14_iphoneos-arm64.deb
-Size: 1600880
-MD5sum: 2219bdabef96d1dfbbd40cf5423af390
-SHA1: dafce6fadc1aeef3e6b02fe052cced5e821858dd
-SHA256: 3201e59ccfe711db8d2b668e260db9497ac3fa4ad2d715092fee9c2eaf54f720
-Section: Multimedia
-Description: yt-dlp 2023.11.14 (Python module + CLI) built for rootless iOS
- yt-dlp is a video/audio downloader with support for hundreds of websites.
- This package bundles yt-dlp version 2023.11.14, the latest version compatible with
- Python 3.9 for rootless jailbreak environments. Includes both the yt_dlp Python
- package and the yt-dlp command-line wrapper.
-Author: v7upsln
-Name: yt-dlp for python3.9
-Sileodepiction: https://v7upsln.github.io/depictions/yt-dlp/com.v7upsln.ytdlp.html
 
