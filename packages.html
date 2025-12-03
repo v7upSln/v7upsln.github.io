@@ -16,6 +16,9 @@
 </head>
 
 <body>
+
+    <div class="cursor-glow"></div>
+
     <div class="container">
         <div class="header">
             <a href="index.html" class="back-link">
@@ -136,23 +139,99 @@
     <div id="footer-container"></div>
 
     <script>
-        // Load footer content
-        fetch('footer.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+        document.addEventListener('DOMContentLoaded', function() {
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isTouchDevice || isMobile) {
+                return; // Disable on touch devices
+            }
+            
+            const cursorGlow = document.querySelector('.cursor-glow');
+            const cursorGlowSecondary = document.querySelector('.cursor-glow-secondary');
+            
+            let mouseX = 0, mouseY = 0;
+            let glowX = 0, glowY = 0;
+            let rafId = null;
+            function updateGlow() {
+                glowX += (mouseX - glowX) * 0.15;
+                glowY += (mouseY - glowY) * 0.15;
+                
+                let glowSecondaryX = glowX;
+                let glowSecondaryY = glowY;
+
+                // Update positions
+                cursorGlow.style.left = `${glowX}px`;
+                cursorGlow.style.top = `${glowY}px`;
+                
+                cursorGlowSecondary.style.left = `${glowSecondaryX}px`;
+                cursorGlowSecondary.style.top = `${glowSecondaryY}px`;
+                
+                rafId = requestAnimationFrame(updateGlow);
+            }
+            
+            // Track mouse position
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                if (!rafId) {
+                    updateGlow();
                 }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-                document.getElementById('footer-container').innerHTML = '<footer><p>Footer failed to load</p></footer>';
+            });
+            
+            document.addEventListener('mouseenter', () => {
+                cursorGlow.classList.add('active');
+                cursorGlowSecondary.classList.add('active');
+                
+                if (!rafId) {
+                    updateGlow();
+                }
+            });
+            
+            document.addEventListener('mouseleave', () => {
+                cursorGlow.classList.remove('active');
+                cursorGlowSecondary.classList.remove('active');
+                
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                }
+            });
+            
+            // Clean up on page unload
+            window.addEventListener('beforeunload', () => {
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                }
+            });
+            
+            // Initialize immediately if mouse is already over the page
+            if (document.hasFocus()) {
+                cursorGlow.classList.add('active');
+                cursorGlowSecondary.classList.add('active');
+                updateGlow();
+            }
+        });
+
+
+        const packageCards = document.querySelectorAll('.package-card');
+        const body = document.body;
+
+        packageCards.forEach(card => {
+            // When mouse enters the package card
+            card.addEventListener('mouseenter', () => {
+                body.classList.add('hide-glow');
             });
 
-        // Enhanced GitHub star count functionality
+            // When mouse leaves the package card
+            card.addEventListener('mouseleave', () => {
+                body.classList.remove('hide-glow');
+            });
+        });
+
+
+
         async function updateStarCount() {
             const username = "v7upSln";
             const repo = "PSVMP";
@@ -185,6 +264,22 @@
         }
 
         updateStarCount();
+
+
+        fetch('/footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
+            document.getElementById('footer-container').innerHTML = '<footer><p>Footer failed to load</p></footer>';
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+.cursor-text {
+    cursor: url('./assets/macos/textcursor.png'), text;
+}
+
+.cursor-pointer {
+    cursor: url('./assets/macos/handpointing.png'), pointer;
+}
+
+.cursor-help {
+    cursor: url('./assets/macos/help.png'), help;
+}
+
+.cursor-alias {
+    cursor: url('./assets/macos/makealias.png'), alias;
+}
+
+.cursor-default {
+    cursor: url('./assets/macos/default.png'), default;
+}
+
+
+
+
+@supports not (cursor: url('./assets/macos/default.png'), default) {
+    .cursor-default,
+    .cursor-pointer,
+    .cursor-text,
+    .cursor-help,
+    .cursor-alias {
+        cursor: auto;
+    }
+}

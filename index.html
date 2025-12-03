@@ -9,23 +9,25 @@
     <meta property="og:description" content="iOS tweaks, utilities, and tools for jailbroken devices">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href='assets/style.css'>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/cursors.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/web/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/web/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/web/favicon-16x16.png">
     <link rel="manifest" href="assets/icons/web/site.webmanifest">
     <link rel="icon" href="assets/icons/web/favicon.ico">
-
 </head>
-
 <body>
+    
+    <div class="cursor-glow"></div>
+    <div class="cursor-glow-secondary"></div>
     
     <main id="main-content">
         <div class="container">
             <div class="hero">
                 <div class="logo">
-                    <img src="https://i.ibb.co/XkL9SRYM/145231985.png" alt="v7upSln Repository Logo">
+                    <img src="https://avatars.githubusercontent.com/u/145231985?s=400&u=9801a3beb5dfb8c6ab78730acfa94be86f23dfb5&v=4" alt="v7upSln Repository Logo">
                 </div>
                 <h1>v7upSln Repository</h1>
                 <p class="subtitle">iOS tweaks, utilities, tools.</p>
@@ -60,21 +62,77 @@
     <div id="footer-container"></div>
 
     <script>
-        // Load footer content
-        fetch('footer.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+        document.addEventListener('DOMContentLoaded', function() {
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isTouchDevice || isMobile) {
+                return;
+            }
+            
+            const cursorGlow = document.querySelector('.cursor-glow');
+            const cursorGlowSecondary = document.querySelector('.cursor-glow-secondary');
+            
+            let mouseX = 0, mouseY = 0;
+            let glowX = 0, glowY = 0;
+            let rafId = null;
+            
+            function updateGlow() {
+                glowX += (mouseX - glowX) * 0.15;
+                glowY += (mouseY - glowY) * 0.15;
+                
+                let glowSecondaryX = glowX;
+                let glowSecondaryY = glowY;
+
+                cursorGlow.style.left = `${glowX}px`;
+                cursorGlow.style.top = `${glowY}px`;
+                
+                cursorGlowSecondary.style.left = `${glowSecondaryX}px`;
+                cursorGlowSecondary.style.top = `${glowSecondaryY}px`;
+                
+                rafId = requestAnimationFrame(updateGlow);
+            }
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                if (!rafId) {
+                    updateGlow();
                 }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-                document.getElementById('footer-container').innerHTML = '<footer><p>Footer failed to load</p></footer>';
             });
+            
+            document.addEventListener('mouseenter', () => {
+                cursorGlow.classList.add('active');
+                cursorGlowSecondary.classList.add('active');
+                
+                if (!rafId) {
+                    updateGlow();
+                }
+            });
+            
+            document.addEventListener('mouseleave', () => {
+                cursorGlow.classList.remove('active');
+                cursorGlowSecondary.classList.remove('active');
+                
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                    rafId = null;
+                }
+            });
+            
+            window.addEventListener('beforeunload', () => {
+                if (rafId) {
+                    cancelAnimationFrame(rafId);
+                }
+            });
+            
+            if (document.hasFocus()) {
+                cursorGlow.classList.add('active');
+                cursorGlowSecondary.classList.add('active');
+                updateGlow();
+            }
+        });
     </script>
 </body>
 </html>
