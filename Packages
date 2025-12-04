@@ -1,17 +1,17 @@
-Package: psvmp
-Version: 3.0.4
+Package: echo
+Version: 1.0.0
 Architecture: iphoneos-arm64
 Maintainer: v7upsln
-Depends: python3, ffmpeg, yt-dlp
-Filename: debs/psvmp_3.0.4_iphoneos-arm64.deb
-Size: 1056448
-MD5sum: 271ea68d9ee8ead283e943152babe4bf
-SHA1: f448a7784d315a224d468286f0c48bd74c3235c8
-SHA256: 46c1559eed274a702072516085137d8dba135c23bf22083029d77e506c3b6eae
+Depends: python3
+Filename: debs/echo_1.0.0_iphoneos-arm64.deb
+Size: 2610
+MD5sum: 36d85ade54f52ac32db761c7aba15414
+SHA1: f390ed9c390bc61735a4766755f3d50bd7103fb6
+SHA256: dfcbbf100ef32f53b42c8e891ce4dacb7e58d25de6ff43be3650c42b70f39274
 Section: Utilities
-Description: Download and transfer media to your PS Vita.
+Description: A lightweight command-line system information tool for iOS that displays hardware and software details.
 Author: v7upsln
-Icon: https://raw.githubusercontent.com/v7upSln/v7upsln.github.io/refs/heads/main/assets/icons/com.v7upsln.psvmp.png
-Name: PS Vita Media Processor
-Sileodepiction: https://v7upsln.github.io/depictions/PSVMP/com.v7upsln.psvmp.html
+Icon: https://raw.githubusercontent.com/v7upSln/Echo/refs/heads/main/assets/logo.png
+Name: Echo
+Sileodepiction: https://v7upsln.github.io/depictions/Echo/com.v7upsln.echo.html
 
