@@ -4,10 +4,10 @@ Architecture: iphoneos-arm64
 Maintainer: v7upsln
 Depends: python3
 Filename: debs/echo_1.0.0_iphoneos-arm64.deb
-Size: 1450
-MD5sum: f2a705cad072b50f32be770f99686c9f
-SHA1: 6c6d278673394dce199ef53b334a780cb019d44e
-SHA256: 8baf24d6c19b4ca423f9825e1e80d3cea16a1dfb665cc7ce3a3234d099461b3d
+Size: 1430
+MD5sum: 2362f059348f73b86a269199335983c3
+SHA1: 02d1ad6ccaa37230f70e2b2ae7a616adcd6df4cb
+SHA256: a5b74ac1c947d9f8e5b5a0399665edeed60e839206dd91d91592d73f9c88c80d
 Section: Utilities
 Description: A lightweight command-line system information tool for iOS that displays hardware and software details.
 Author: v7upsln
