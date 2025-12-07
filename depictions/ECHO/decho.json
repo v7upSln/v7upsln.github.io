@@ -24,16 +24,6 @@
         {
           "class": "DepictionSubheaderView",
           "useMargins": true,
-          "title": "Compatibility: macOS | iOS"
-        },
-        {
-          "class": "DepictionSubheaderView",
-          "useMargins": true,
-          "title": "Language: C"
-        },
-        {
-          "class": "DepictionSubheaderView",
-          "useMargins": true,
           "title": "Key Features"
         },
         {
@@ -80,7 +70,7 @@
           "views": [
             {
               "class": "DepictionMarkdownView",
-              "markdown": "* Device model\n* iOS/macOS version\n* Kernel version\n* CPU brand and architecture\n* GPU name\n* Battery percentage\n* System uptime\n* RAM capacity\n* Storage capacity and availability"
+              "markdown": "* Device model\n* iOS version\n* Kernel version\n* CPU brand and architecture\n* GPU name\n* Battery percentage\n* System uptime\n* RAM capacity\n* Storage capacity and availability"
             }
           ]
         },
