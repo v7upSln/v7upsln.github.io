@@ -1,17 +1,17 @@
-Package: decho
+Package: ipez
 Version: 1.0.0
 Architecture: iphoneos-arm64
 Maintainer: v7upsln
 Depends: python3
 Filename: debs/echo_1.0.0_iphoneos-arm64.deb
-Size: 2706
-MD5sum: 02c8444b574501bc945adbc92467d8a3
-SHA1: ac3ebac3fc36f739ef6ba09e5a9db4d42a2b7d75
-SHA256: f60d1195d6131e1968c6f570583e45a8c08f84bcd0b77622b96840929ec2c88d
+Size: 1450
+MD5sum: f2a705cad072b50f32be770f99686c9f
+SHA1: 6c6d278673394dce199ef53b334a780cb019d44e
+SHA256: 8baf24d6c19b4ca423f9825e1e80d3cea16a1dfb665cc7ce3a3234d099461b3d
 Section: Utilities
 Description: A lightweight command-line system information tool for iOS that displays hardware and software details.
 Author: v7upsln
-Icon: https://raw.githubusercontent.com/v7upSln/Decho/refs/heads/main/assets/icon.png
-Name: Decho
+Icon: https://raw.githubusercontent.com/v7upSln/ipez/refs/heads/main/assets/icon.png
+Name: Ipez
 Sileodepiction: https://raw.githubusercontent.com/v7upSln/v7upsln.github.io/refs/heads/main/depictions/ECHO/decho.json
 
