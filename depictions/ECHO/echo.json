@@ -1,0 +1,129 @@
+{
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "Decho"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "A lightweight command-line system information tool for iOS that displays hardware and software details.",
+          "useSpacing": true,
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "useMargins": true,
+          "title": "Version 1.0.0"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "useMargins": true,
+          "title": "Compatibility: macOS | iOS"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "useMargins": true,
+          "title": "Language: C"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "useMargins": true,
+          "title": "Key Features"
+        },
+        {
+          "class": "DepictionStackView",
+          "views": [
+            {
+              "class": "DepictionMarkdownView",
+              "markdown": "* Displays device model and hardware information\n* Shows iOS/macOS version and kernel details\n* Reports CPU and GPU specifications\n* Battery percentage monitoring\n* System uptime tracking\n* RAM and storage usage statistics\n* Clean, colorful terminal output"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "useMargins": true,
+          "title": "Installation and Usage"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Add the author's repository and install via your package manager. The repository link is [here](https://v7upsln.github.io).",
+          "useSpacing": true,
+          "useRawFormat": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Usage Command"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "`decho`\n\nThe tool will display comprehensive system information including device model, OS version, CPU, GPU, battery status, uptime, and storage details.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Information Displayed"
+        },
+        {
+          "class": "DepictionStackView",
+          "views": [
+            {
+              "class": "DepictionMarkdownView",
+              "markdown": "* Device model\n* iOS/macOS version\n* Kernel version\n* CPU brand and architecture\n* GPU name\n* Battery percentage\n* System uptime\n* RAM capacity\n* Storage capacity and availability"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "License"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "This project is licensed under the **MIT License**.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Author"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Made by **v7upsln**.",
+          "useSpacing": true
+        }
+      ],
+      "xPadding": 10
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Version 1.0.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Initial public release.\n- Core features implemented:\n  - Hardware and software details display.\n  - CPU/GPU reporting.\n  - Battery, uptime, RAM, and storage stats.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ],
+  "tintColor": "blue",
+  "headerImage": "https://raw.githubusercontent.com/v7upSln/Decho/refs/heads/main/assets/header.png"
+}
