@@ -8,11 +8,11 @@
       "views": [
         {
           "class": "DepictionHeaderView",
-          "title": "Decho"
+          "title": "ipez"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "A lightweight command-line system information tool for iOS that displays hardware and software details.",
+          "markdown": "A clean and minimal command-line system utility for iOS that provides essential network, routing, and external connection information.",
           "useSpacing": true,
           "useRawFormat": true
         },
@@ -31,7 +31,7 @@
           "views": [
             {
               "class": "DepictionMarkdownView",
-              "markdown": "* Displays device model and hardware information\n* Shows iOS/macOS version and kernel details\n* Reports CPU and GPU specifications\n* Battery percentage monitoring\n* System uptime tracking\n* RAM and storage usage statistics\n* Clean, colorful terminal output"
+              "markdown": "* Shows Wi-Fi and network interface status\n* Displays device routing information\n* Fetches external/public IP\n* Clean and readable command-line output\n* Lightweight and fast execution"
             }
           ]
         },
@@ -55,7 +55,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "`decho`\n\nThe tool will display comprehensive system information including device model, OS version, CPU, GPU, battery status, uptime, and storage details.",
+          "markdown": "`ipez`\n\nRunning the command will display network interface details, routing information, and your public IP address.",
           "useSpacing": true
         },
         {
@@ -70,7 +70,7 @@
           "views": [
             {
               "class": "DepictionMarkdownView",
-              "markdown": "* Device model\n* iOS version\n* Kernel version\n* CPU brand and architecture\n* GPU name\n* Battery percentage\n* System uptime\n* RAM capacity\n* Storage capacity and availability"
+              "markdown": "* Interface IP addresses\n* Active network interfaces\n* Default gateway\n* Public IP address\n* Basic routing information"
             }
           ]
         },
@@ -108,7 +108,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Initial public release.\n- Core features implemented:\n  - Hardware and software details display.\n  - CPU/GPU reporting.\n  - Battery, uptime, RAM, and storage stats.",
+          "markdown": "- Initial public release.\n- Base functionality included:\n  - Interface IP readout\n  - Routing information\n  - Public IP retrieval\n  - Clean concise output",
           "useSpacing": true
         }
       ]
@@ -117,4 +117,3 @@
   "tintColor": "blue",
   "headerImage": "https://raw.githubusercontent.com/v7upSln/ipez/refs/heads/main/assets/header.png"
 }
-
