@@ -126,6 +126,16 @@ h1 {
     color: var(--warning);
 }
 
+.status-available {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.status-available i {
+    color: var(--success);
+}
+
 .contact-links {
     display: flex;
     gap: 10px;
