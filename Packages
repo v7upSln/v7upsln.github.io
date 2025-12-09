@@ -4,10 +4,10 @@ Architecture: iphoneos-arm64
 Maintainer: v7upsln
 Depends: network-cmds
 Filename: debs/ipez_1.0.0_iphoneos-arm64.deb
-Size: 1186
-MD5sum: cafb5b0539ccb3698e3b4a1f53ec289c
-SHA1: ce31200e54ef3397ab109ae2111aacb1364fd73d
-SHA256: ea10b0da142124b9b18a468c278d7ccb188779478f40cad6f20e2fca16dcb5f0
+Size: 1204
+MD5sum: 18e751864d96d98b8bec5d5d1f58abfb
+SHA1: bb9be55b502c9e3262d92a263f2d4e2bb2861686
+SHA256: 4abe3dac4417000ee1d2c22ff692c09b1d6ea6e57dd06c2a49fe76ccd17cfb4e
 Section: Utilities
 Description: A lightweight command-line system information tool for iOS that displays hardware and software details.
 Author: v7upsln
