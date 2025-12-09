@@ -32,8 +32,13 @@
                 <h1>v7upSln Repository</h1>
                 <p class="subtitle">iOS tweaks, utilities, tools.</p>
                 
-                <div class="repo-url">
-                    https://v7upsln.github.io/
+                <div class="repo-url-container">
+                    <div class="repo-url" id="repo-url">
+                        https://v7upsln.github.io/
+                    </div>
+                    <button class="btn-copy" id="copy-btn" aria-label="Copy repository URL">
+                        <i class="fas fa-copy"></i>
+                    </button>
                 </div>
 
                 <div class="installers">
@@ -131,6 +136,58 @@
                 cursorGlow.classList.add('active');
                 cursorGlowSecondary.classList.add('active');
                 updateGlow();
+            }
+        });
+
+        // Copy repository URL functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyBtn = document.getElementById('copy-btn');
+            const repoUrl = document.getElementById('repo-url');
+            const repoUrlText = 'https://v7upsln.github.io/';
+
+            if (copyBtn && repoUrl) {
+                copyBtn.addEventListener('click', async function() {
+                    try {
+                        await navigator.clipboard.writeText(repoUrlText);
+                        
+                        // Visual feedback
+                        const icon = copyBtn.querySelector('i');
+                        const originalClass = icon.className;
+                        
+                        icon.className = 'fas fa-check';
+                        copyBtn.classList.add('copied');
+                        
+                        // Reset after 2 seconds
+                        setTimeout(() => {
+                            icon.className = originalClass;
+                            copyBtn.classList.remove('copied');
+                        }, 2000);
+                    } catch (err) {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = repoUrlText;
+                        textArea.style.position = 'fixed';
+                        textArea.style.opacity = '0';
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        
+                        try {
+                            document.execCommand('copy');
+                            const icon = copyBtn.querySelector('i');
+                            const originalClass = icon.className;
+                            icon.className = 'fas fa-check';
+                            copyBtn.classList.add('copied');
+                            setTimeout(() => {
+                                icon.className = originalClass;
+                                copyBtn.classList.remove('copied');
+                            }, 2000);
+                        } catch (fallbackErr) {
+                            console.error('Failed to copy:', fallbackErr);
+                        }
+                        
+                        document.body.removeChild(textArea);
+                    }
+                });
             }
         });
     </script>
